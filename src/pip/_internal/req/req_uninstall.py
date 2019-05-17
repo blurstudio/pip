@@ -593,7 +593,7 @@ class UninstallPthEntries(object):
         # backslashes.  This is correct for entries that describe absolute
         # paths outside of site-packages, but all the others use forward
         # slashes.
-        if WINDOWS and not os.path.splitdrive(entry)[0]:
+        if WINDOWS and not os.path.isabs(entry):
             entry = entry.replace('\\', '/')
         self.entries.add(entry)
 
