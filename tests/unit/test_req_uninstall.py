@@ -144,10 +144,10 @@ class TestUninstallPathSet(object):
         # Create a .pth file for testing
         with open(pth_file, 'w') as f:
             f.writelines([tmpdir, '\n',
-                relative, '\n'])
+                          relative, '\n'])
             if on_windows:
                 f.writelines([share, '\n',
-                    share_com, '\n'])
+                              share_com, '\n'])
         # Add paths to be removed
         pth = UninstallPthEntries(pth_file)
         pth.add(tmpdir)
