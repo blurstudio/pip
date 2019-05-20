@@ -155,7 +155,7 @@ class TestUninstallPathSet(object):
         if on_windows:
             pth.add(share)
             pth.add(share_com)
-        # Check that the paths were added to entriesa
+        # Check that the paths were added to entries
         if on_windows:
             check = set([tmpdir, relative, share, share_com])
         else:
