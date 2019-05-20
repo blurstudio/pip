@@ -162,6 +162,7 @@ class TestUninstallPathSet(object):
             check = set([tmpdir, relative])
         assert pth.entries == check
 
+
     @pytest.mark.skipif("sys.platform == 'win32'")
     def test_add_symlink(self, tmpdir, monkeypatch):
         monkeypatch.setattr(pip._internal.req.req_uninstall, 'is_local',
